@@ -1,4 +1,4 @@
-const controller = require('./controller/controller')
+const controller = require('./controller/Controller')
 const router = require('express').Router();
 const session = require("express-session")
 const cook = require('cookie-parser')
