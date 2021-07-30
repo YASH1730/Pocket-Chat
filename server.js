@@ -129,7 +129,9 @@ io.on('connection',(socket) =>{
                         Reciver : data.reciver,
                         Massage : data.msg,
                         Date : date,
-                        Time : ctime
+                        Time : ctime,
+                        Stime: Stime,
+                        Sdate: Sdate
                     })
                     metaData.save()
                 }
