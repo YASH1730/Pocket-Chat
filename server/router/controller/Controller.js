@@ -3,7 +3,7 @@
 require("dotenv").config();
 const user = require("../../../models/User.js");
 const feed = require("../../../models/Feed.js");
-const follow = require("../../../FollowUnfollow.js");
+const follow = require("../../../models/FollowUnfollow.js");
 const massage = require("../../../models/Massage.js");
 const OTP = require("../../../models/Otp.js");
 const bcrypt = require("bcrypt");
