@@ -6,6 +6,6 @@ const records = mongoose.Schema({
     Data : String,
     Time : String,
     Stime : String,
-    SDate : String
+    Sdate : String
 })
 module.exports =  mongoose.model( 'Massage-Records' , records)
