@@ -1,11 +1,11 @@
 //module
 // const validator = require('express-validator')
 require("dotenv").config();
-const user = require("../../..//models/User.js");
-const feed = require("../../..//models/Feed.js");
-const follow = require("../../..//FollowUnfollow.js");
-const massage = require("../../..//models/Massage.js");
-const OTP = require("../../..//models/Otp.js");
+const user = require("../../../models/User.js");
+const feed = require("../../../models/Feed.js");
+const follow = require("../../../FollowUnfollow.js");
+const massage = require("../../../models/Massage.js");
+const OTP = require("../../../models/Otp.js");
 const bcrypt = require("bcrypt");
 const JWT = require("jsonwebtoken");
 const router = require("express").Router();
