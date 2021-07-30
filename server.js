@@ -3,8 +3,8 @@ const express = require('express');
 const app = express();
 const session = require("express-session")
 const reqflash = require('req-flash')
-const follow = require("/media/yashwant/Mystroage/Chat_App_Final/models/FollowUnfollow.js");
-const massage = require("/media/yashwant/Mystroage/Chat_App_Final/models/Massage.js");
+const follow = require("./models/FollowUnfollow");
+const massage = require("./models/Massage.js");
 const PORT = process.env.PORT || 80;
 
 
