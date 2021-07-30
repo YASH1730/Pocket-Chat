@@ -45,7 +45,7 @@ app.use(fetchURL = (req,res,next) =>{
 
 //setting up router requests
 
-app.use(require('./server/router/route'))
+app.use(require('./server/router/Route'))
 
 
 
