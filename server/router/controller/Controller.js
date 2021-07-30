@@ -1,11 +1,11 @@
 //module
 // const validator = require('express-validator')
 require("dotenv").config();
-const user = require("/media/yashwant/Mystroage/Chat_App_Final/models/user.js");
-const feed = require("/media/yashwant/Mystroage/Chat_App_Final/models/feed.js");
-const follow = require("/media/yashwant/Mystroage/Chat_App_Final/models/followUnfollow.js");
-const massage = require("/media/yashwant/Mystroage/Chat_App_Final/models/massage.js");
-const OTP = require("/media/yashwant/Mystroage/Chat_App_Final/models/otp.js");
+const user = require("/media/yashwant/Mystroage/Chat_App_Final/models/User.js");
+const feed = require("/media/yashwant/Mystroage/Chat_App_Final/models/Feed.js");
+const follow = require("/media/yashwant/Mystroage/Chat_App_Final/models/FollowUnfollow.js");
+const massage = require("/media/yashwant/Mystroage/Chat_App_Final/models/Massage.js");
+const OTP = require("/media/yashwant/Mystroage/Chat_App_Final/models/Otp.js");
 const bcrypt = require("bcrypt");
 const JWT = require("jsonwebtoken");
 const router = require("express").Router();
