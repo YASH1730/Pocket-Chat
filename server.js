@@ -5,6 +5,7 @@ const session = require("express-session")
 const reqflash = require('req-flash')
 const follow = require("/media/yashwant/Mystroage/Chat_App_Final/models/followUnfollow.js");
 const massage = require("/media/yashwant/Mystroage/Chat_App_Final/models/massage.js");
+const PORT = process.env.PORT || 80;
 
 
 // const controller = require('./controller/controller')
@@ -49,7 +50,7 @@ app.use(require('./server/router/route'))
 
 
 //setting up the server at listening
-const server  = app.listen(process.env.PORT || 80,()=>{
+const server  = app.listen(PORT,()=>{
     console.log('sever listing at http://localhost:80')
 })
 
