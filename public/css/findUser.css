@@ -1,0 +1,114 @@
+*{
+    scroll-behavior: smooth;
+}
+
+.mainBox{
+    display: grid;
+    width: 90%;
+    height: 80%;
+    grid-template-rows: 75vh;
+    margin: auto;
+    gap: 5%;
+    /* border: 2px solid black; */
+}
+
+#searchBox{
+    display: grid;
+    border-radius: 10px;
+    grid-template-rows: 20% 89%;
+    width:100%;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+#searchBox form{
+    display: flex;
+    color: aliceblue;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+#searchBox form input{
+    box-shadow: 0px 0px 5px 1px rgb(130, 180, 238) ;
+    border-radius: 10px;
+    border-width: 0ch;
+    margin: 2%;
+    width: 20%;
+    padding: 0.5%;
+    
+}
+#searchBox form input:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px 1px rgb(243, 168, 158) ;
+}
+
+#searchBox form button{
+    padding: 0.5%;
+cursor: pointer;
+}
+
+#searchBox ul{
+    overflow-y: scroll;
+    border-radius: 10px;
+    min-width: 50%;
+    background-color: #becfd8;
+    margin: auto;
+    margin-top: 0%;
+    min-height: 85%;
+    max-height: 85%;
+    list-style: none;
+}
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+#searchBox ul::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#searchBox ul {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#searchBox ul li{
+    display: flex;
+    margin: 5%;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 2px 1px rgb(183, 183, 190) ;
+}
+
+#searchBox ul li img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#searchBox ul li strong{
+    margin-left: 5%;
+    font-size: 1rem;
+}
+
+#searchBox ul a{
+    text-decoration: none;
+    color: black;
+
+}
+
+
+@media screen and (max-width : 500px) {
+    #searchBox ul{
+        min-width: 70%;
+    }
+
+    #searchBox form input{
+        width: 30%;
+        padding: 0.4%;
+    }
+    #searchBox form button{
+        padding: 0.4%;
+    }
+}

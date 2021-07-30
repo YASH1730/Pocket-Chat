@@ -1,0 +1,141 @@
+extends header.pug 
+
+
+block style
+    style  
+        include ../public/css/profile.css
+
+block content
+    .mainbox 
+        #imgbox
+            img(id = 'profile' src = src , alt="profile pic")
+        if typeof edit != "undefined"
+            form( id='form' action="/profile/pic", method="post" enctype="multipart/form-data") 
+                label(for="files" )
+                    img(src="https://res.cloudinary.com/yash3002/image/upload/v1627368878/addPic_j5wdcu.png", alt="")
+                input(type="file",id = "files", name="img", accept = 'image/*')
+                button(type="submit") 
+                    strong Change
+                
+        .nameHead 
+            h2 #{name}
+        .status 
+            div 
+                h4 Posts
+            div 
+                h4 Follower
+            div 
+                h4 Following
+            div 
+                strong  #{obj.post}
+            div 
+                strong  #{obj.follower} 
+            div 
+                strong  #{obj.following} 
+            
+            div 
+                if typeof showButton != "undefined"
+                    if typeof showFbutton != "undefined"
+                        a(href="/profile/follow/" + obj.name)   
+                            button 
+                                strong Follow 
+                    else
+                        a(href="/profile/unfollow/" + obj.name)   
+                            button 
+                                strong Unfollow 
+            div 
+                strong  
+            div 
+                if typeof showFbutton == "undefined"
+                    a(href="/chat/" + obj.name)   
+                        button 
+                            strong Massage 
+            
+        br
+        hr
+        br
+
+        form(action="/profile/update", method="post" , class = "about")
+            if typeof edit != "undefined"
+                label(for="Bio") 
+                    span  Bio
+                textarea(name="bio", id = "Bio", cols="30", rows="2") #{obj.bio}
+
+                label(for="DOB")
+                    span  DOB :
+                
+                input(id = 'DOB' type="date" name="dob" value = obj.dob) 
+                
+                label(for="Gender") 
+                    span  Gender :
+                select(name="gender" id ="Gender")
+                    option(value="Not Mention" selected) Not Mention
+                    if obj.gender == "Male"
+                        option(value="Male" selected)  Male
+                    else 
+                        option(value="Male")  Male
+                    
+                    if obj.gender == "Female"
+                        option(value="Female" selected) Female 
+                    else
+                        option(value="Female") Female 
+
+                    if obj.gender == "Other"    
+                        option(value="Other" selected) Other
+                    else 
+                        option(value="Other") Other
+                label(for="Email") 
+                    span  Email :
+                
+                input( id = 'Email' readonly   type="email"  name="email"  value = obj.email)
+                
+                br
+                div#specialBtn
+                    button(type="submit" id="Accept")
+                        strong Accept Changes
+                    button(type="submit" formaction = "/profile/delete/"+ name, id = "delete")    
+                        strong Delete Account
+            else 
+                label(for="Bio") 
+                    span  Bio
+                textarea(name="bio", readonly  id = "Bio", cols="30", rows="2") #{obj.bio}
+
+                label(for="DOB")
+                    span  DOB :
+                
+                input(id = 'DOB' readonly name="dob" value = obj.dob) 
+                
+                label(for="Gender")  
+                    span  Gender : 
+                    
+                input(type="text" readonly  value = obj.gender)
+                
+                label(for="Email") 
+                    span  Email :
+                
+                input( id = 'Email' readonly   type="email"  name="email"  value = obj.email)
+                
+        br
+        hr
+        br
+    block content
+         .displayBox
+            if typeof data1 != "undefined"
+                each Post in data1
+                    div.item 
+                        img(src= Post.Post, class = "imgs" alt="")
+                        div.caption
+                            p 
+                                strong #{Post.UserName}
+                            p 
+                                i #{Post.Discription}
+                            br
+                            p.date
+                                small  #{Post.Data}
+                            if typeof edit != "undefined"
+                                a(href="/profile/deletePost/" + Post.Public_id)
+                                    button.btn 
+                                        strong  Delete
+           
+block script 
+    script(src="../public/js/profile.js") 

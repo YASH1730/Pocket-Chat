@@ -1,0 +1,20 @@
+extends header.pug 
+
+block style
+    style 
+        include ../public/css/findUser.css
+block content
+    .mainBox
+        #searchBox 
+            form(action="/user/find", method="post") 
+                input(type="search", placeholder = "User Name" ,name="Suser")
+                button(type="submit") Search
+            ul 
+                if typeof data != "undefined" 
+                    each val in data
+                        a(href="/profile/"+val.UserName  ) 
+                            li
+                               img(src=val.Profile, alt="") 
+                               strong  #{val.UserName}
+//- block script 
+//-     script(src="../public//finduser.js") 

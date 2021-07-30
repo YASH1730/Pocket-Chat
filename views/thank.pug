@@ -1,0 +1,13 @@
+extends header.pug 
+
+block style
+    style 
+        include ../public/css/thank.css
+
+block content 
+        .mainBox
+            h1 Thanks You
+            h4 Your verification is completed click on button blow to login !!!
+            a(href="/login")
+                button() 
+                    h3 Continue As #{name}

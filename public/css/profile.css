@@ -1,0 +1,360 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.mainbox{
+    display: flex;
+    /* margin: auto; */
+    flex-direction: column;
+    width : 60%;
+    align-self: center;
+    margin-top: 3%;
+    align-content: center;
+    justify-items: center;
+    height: fit-content;
+    /* border: 2px solid black; */
+    /* background-color: rgba(131, 125, 125, 0.5); */
+}
+#imgbox{
+    overflow: hidden;
+    display: flex;
+    max-width: 200px;
+    min-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 0%;
+    border-radius: 50px;
+    /* border: 2px solid black; */
+    background-color: rgb(251, 251, 251);
+}
+
+.nameHead{
+    align-self: center;
+}
+
+
+#profile{
+    box-shadow: 0px 0px 10px 1px #d0bfbf;
+    width: 80%;
+    margin: auto;
+
+}
+.content p{
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    /* border: 2px solid black; */
+    justify-self: center;
+    width: 80%;
+    justify-content: center;
+}
+
+.displaynone{
+    display: none;
+}
+
+#form{
+    display: flex;
+    /* margin-top: 30%; */
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+    justify-content: center;
+}
+
+#form img{
+    width: 50%;
+    height: 50%;
+}
+
+#form button{
+    width: 10%;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: #007bff;
+    border-color: #007bff;
+
+}
+
+#files{
+    width: 2%;
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.status{
+    display: grid;
+    margin-top: 2%;
+    align-self: center;
+    text-align: center;
+    row-gap: 5%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    width: 80%;
+    
+}
+
+.status button{
+    margin: auto;
+    cursor: pointer;
+    padding: 3%;
+    margin-top: 1%;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: #007bff;
+    border-color: #007bff;
+
+}
+
+
+.status button:hover{
+    background-color: #054b95;
+}
+
+.about{
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 80%;
+    justify-content: center;
+    /* border: 2px solid rgb(105, 42, 42); */
+}
+
+.about label{
+    margin-top: 2%;
+}
+
+.about input,select,textarea{
+    border-width: 0ch;
+    font-size: larger;
+    border-bottom: 1px solid rgba(184, 178, 178, 0.623) ;
+    padding: 2%;
+    resize: none;
+}
+.about textarea:focus{
+
+    outline: none;
+    border-width: 0ch;
+    border-bottom: 1px solid rgba(2, 27, 251, 0.623) ;
+}
+.about input:focus{
+
+    outline: none;
+    border-width: 0ch;
+    border-bottom: 1px solid rgba(2, 27, 251, 0.623) ;
+}
+.about select:focus{
+
+    outline: none;
+    border-width: 0ch;
+    border-bottom: 1px solid rgba(2, 27, 251, 0.623) ;
+}
+
+.about span{
+    color: rgb(104, 102, 99);
+}
+
+.about button{
+    /* margin: auto; */
+    padding: 2%;
+    margin-top: 1%;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: #007bff;
+    border-color: #007bff;
+    
+}
+
+#specialBtn{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+
+#Accept{
+    margin: auto;
+}
+
+#delete{
+    background-color: #ff1e00;
+    margin: auto;
+    border-color: #ff1e00;
+}
+
+#delete:hover{
+    background-color: #950505;
+}
+
+
+.about button:hover{
+    background-color: #054b95;
+}
+
+.post{
+    display: grid;
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    gap: 30px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+}
+
+.post img{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid black; */
+}
+
+
+
+.displayBox{
+    display: grid;
+    margin: auto;
+    width: 90%;
+    height: fit-content;
+    row-gap: 20px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto;
+    margin-bottom: 5%;
+    /* border: 2px solid black; */
+
+}
+
+.item{
+    display: flex;
+    margin: auto;
+    width: 70%;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: rgba(251, 251, 251, 0.603);
+}
+
+.caption{
+    display: block;
+    padding: 2%;
+    background-color: #bdbdbd;
+    color: #030d14;
+    border-radius: 0px 0px 10px 10px;
+
+}
+
+.date{
+    float: right;
+}
+
+.imgs{
+    width: 100%;
+    height: 90%;
+}
+
+.btn{
+    background-color: rgb(82, 160, 224);
+    color: aliceblue;
+    border-radius: 10px;
+    font-size: 70%;
+    width: 30%;
+}
+
+
+@media screen and (max-width : 800px) {
+    .post {
+        gap: 30px;
+        justify-content: center;
+        grid-template-columns: 80%;
+    }
+
+    #form img {
+        width: 35%;
+        height: 50%;
+    }
+
+    #form button {
+        width: 13%;
+        cursor: pointer;
+        padding: 2px;
+        border-radius: 10px;
+        color: aliceblue;
+        background-color: #007bff;
+        border-color: #007bff;
+    }
+}
+
+@media screen and (max-width : 500px) {
+
+
+.mainbox{
+    width: 80%;
+    margin-top: 5%;
+}
+#imgbox{
+    max-width: 150px;
+    min-width: 150px;
+    max-height: 150px;
+    min-height: 150px;
+}
+
+.status{
+    margin-bottom: 5%;
+}
+
+.displayBox{
+    display: grid;
+    margin: auto;
+    width: 90%;
+    height: fit-content;
+    justify-content: center;
+    row-gap: 20px;
+    grid-template-columns: 80%;
+    grid-template-rows: auto;
+    margin-bottom: 5%;
+    /* border: 2px solid black; */
+
+}
+
+}
+
+@media screen and (max-width : 400px) {
+.mainbox{
+    width: 95%;
+    margin-top: 5%;
+}
+
+#form button {
+    width: 17%;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+#imgbox{
+    width: 150px;
+}
+.status {
+    margin-top: 5%;
+    row-gap : 15%;
+    width: 90%;
+    margin-bottom: 5%;
+
+}
+
+
+
+}

@@ -1,0 +1,157 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'EB Garamond', serif;
+}
+
+img{
+    cursor: pointer;
+    pointer-events: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* nav css */
+
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #003049;
+}
+
+nav h1 {
+    margin: auto;
+    float: left;
+    color: aliceblue;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-left: 0%;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 5px 0px 5px 15px;
+    /* margin: 5%; */
+}
+
+nav ul li a {
+    font-size: 150%;
+    text-decoration: none;
+    color: aliceblue;
+    text-align: center;
+}
+
+nav ul li a img{
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+}
+
+
+.button{
+    display: flex;
+    width: 110px;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.button2{
+    display: flex;
+    width: 50px;
+    height: 20px;
+    justify-self: center;
+    align-self: center;
+    justify-content: center;
+    align-self: center;
+}
+
+
+nav ul li h4{
+    color: aliceblue;
+}
+
+/* nav css end */
+
+
+footer{
+    width: 100%;
+    height: fit-content;
+    color: rgb(246, 253, 253);
+    background-color: #000D14;
+    margin-top: auto;
+}
+
+footer h3{
+    font-weight: normal;
+    text-align: center;
+    line-height: 3rem;
+}
+
+ 
+footer a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+
+#menu{
+    /* display: none; */
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    margin-right: 8px;
+    cursor: pointer;
+    border: 2px solid white;
+    
+}
+
+
+@media screen and (max-width : 600px) {
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: #003049;
+    }
+    nav ul li a img{
+        width: 25px;
+        height: 25px;
+        filter: invert(1);
+    }
+    
+    nav h1 {
+        margin: auto;
+        float: left;
+        color: aliceblue;
+    }
+    
+    nav ul{
+        display: flex;
+        margin: auto;
+        margin-top: 1%;
+    }
+    
+    nav ul li{
+        list-style: none;
+        padding: 5px 10px 0px 15px;
+        /* margin: 5%; */
+    }
+    
+}

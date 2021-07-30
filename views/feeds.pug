@@ -1,0 +1,33 @@
+extends header.pug
+
+block style 
+    style 
+        include ../public/css/feed.css
+block content
+    .topContainer 
+        #userInfo
+            img(src= DP , alt="profile photo")
+            strong #{name}
+        #userPost          
+            form( id='form' action="/feed/post", method="post" enctype="multipart/form-data") 
+                input(type="text", name="Discription" , placeholder = "Add Discription") 
+                label(for="files" class="btn")
+                    img(src="https://res.cloudinary.com/yash3002/image/upload/v1627368878/addPic_j5wdcu.png", alt="")
+                input(type="file",id = "files", name="img", accept = 'image/*')
+                button(type="submit") POST
+    hr.hr
+
+    .displayBox
+        each Post in data1
+            a(href=Post.Post)     
+                div.item 
+                        img(src= Post.Post, class = "imgs" alt="")
+                        div.caption
+                            p 
+                                strong #{Post.UserName}
+                            p 
+                                i #{Post.Discription}
+                            p.date
+                                small  #{Post.Data}
+//- block script 
+//-     script(src="../public/feed.js") 

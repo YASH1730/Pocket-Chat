@@ -1,0 +1,23 @@
+extends header.pug 
+
+block style 
+    style 
+        include ../public/css/home.css
+
+block content 
+     div.banner
+        img(src="https://res.cloudinary.com/yash3002/image/upload/v1627214768/homeBanner_vpkbxi.png", alt="")
+        if typeof flag != 'undefined'
+            div.info 
+                h1 Pocket Chat
+                br
+                p.
+                    <strong> Welcome #{name} </strong>, to the Pocket Chat app. Here, you can chat with your friends and famiy, and uploading your art work here.
+                a(href="/chat/"+ name ,id ="chatBtn")
+                    button 
+                        strong Start Chat  
+        else
+            div.info     
+                h1 Pocket Chat
+                br
+                p <strong>" Welcome</strong>, to the Pocket Chat app. Here, you can chat with your friends and famiy, and uploading your art work here.<strong>"</strong>

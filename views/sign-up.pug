@@ -1,0 +1,26 @@
+extends header.pug
+
+block style 
+    style 
+        include ../public/css/sign-up.css
+
+block content
+        div(id = 'container')
+            div(id='container-img')
+                img(src="https://res.cloudinary.com/yash3002/image/upload/v1627214769/sign-up_usiizq.png", id = 'main_IMG', alt="Chat_IMG", srcset="")
+            div(id='container-form')
+                form(action="/signup/post", method="POST")
+                    h1 Sign-Up
+                    if typeof err != 'undefind'
+                        p(class='alert') 
+                            strong #{err}
+                    input(class = 'form_item',type="text",placeholder = 'Username',name="username",pattern = "[a-zA-Z][a-zA-Z0-9-_.]{1,15}",title = "Username must have letter first (either case) and spaces or / are not allowed, maximum length could be 15 charecter max.")
+                    input(class = 'form_item',type="email",placeholder = 'Email', name="email") 
+                    input(class = 'form_item', id = "password", type="password" pattern = ".{8,}" title = "Minimum eight characters, at least.",placeholder = 'Password', name="password")
+                    div(class = 'form_item' id = "show")
+                        input(type="checkbox" onclick="myFunction()") 
+                        small Show Password
+                    input(class = 'form_item',type="password" placeholder = 'Re-Enter_Password', name="reenterpassword")
+                    button(id='submit',type = 'submit') Submit
+block script 
+    script(src="../public/js/sing-up.js") 

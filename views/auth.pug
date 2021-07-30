@@ -1,0 +1,21 @@
+extends header.pug 
+
+
+block style
+    style  
+        include ../public/css/auth.css
+
+block content
+    form(action="/auth/"+email+"/"+attempts+"/"+username+"/"+password method="post")
+        p Enter the 6 digit OTP wich is sent to
+          strong  #{email}
+          to  for verification
+        if attempts < 3
+            h5(style = "color : red;") Invalid Opt only #{attempts} attempts are left !!!
+        else 
+            h5(style = "color : red;") #{attempts} attempts are given !!!
+        br
+        input(type="text",placeholder = "OTP Ex :- 123456", name="otp")
+        button(type="submit") 
+            strong Verify 
+        

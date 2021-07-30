@@ -1,0 +1,21 @@
+extends header.pug
+
+block style 
+    style 
+        include ../public/css/login.css
+
+block content
+        div(id = 'container')
+            div(id='container-img')
+                img(src="https://res.cloudinary.com/yash3002/image/upload/v1627214902/login_czkjyd.png", id = 'main_IMG', alt="Chat_IMG", srcset="")
+            div(id='container-form')
+                form(action="/login/post", method="POST")
+                    h1 Log-In
+                    if typeof err != 'undefind'
+                        p(class='alert') 
+                            strong #{err}
+                    input(class = 'form_item',type="email",placeholder = 'Email', name="email") 
+                    input(class = 'form_item',type="password",placeholder = 'Password', name="password")
+                    p Newuser Click :- 
+                        a(href="/signup") Register Now
+                    button(id='submit',type = 'submit') Submit

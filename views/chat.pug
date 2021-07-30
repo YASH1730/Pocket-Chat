@@ -1,0 +1,35 @@
+
+extends header.pug 
+
+block style
+    style 
+        include ../public/css/chat.css
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.css")
+block content
+        .mainBox
+            #userList
+                h1 Following 
+                ul 
+                    each val in data
+                            a(href="/profile/"+val.Leader ) 
+                                li
+                                    strong  #{val.Leader}
+            #searchBox
+                p(id = 'name') #{name}
+                #select
+                    select(id = "selection")
+                        option(value="") Select Friend 
+                        each val in data 
+                            option(value = val.Leader) #{val.Leader}
+                    button(id = "selectBtn") Start Chat 
+                #display
+                #sentBox
+                    input(type="text",id ="msg", name="Massage")
+                    label(for="msg") 
+                        button(id = "btn")
+                            strong Send
+block script
+            script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js") 
+            script(src="../public/js/chat.js")       
+
