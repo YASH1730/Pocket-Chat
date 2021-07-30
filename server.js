@@ -3,8 +3,8 @@ const express = require('express');
 const app = express();
 const session = require("express-session")
 const reqflash = require('req-flash')
-const follow = require("/media/yashwant/Mystroage/Chat_App_Final/models/followUnfollow.js");
-const massage = require("/media/yashwant/Mystroage/Chat_App_Final/models/massage.js");
+const follow = require("/media/yashwant/Mystroage/Chat_App_Final/models/FollowUnfollow.js");
+const massage = require("/media/yashwant/Mystroage/Chat_App_Final/models/Massage.js");
 const PORT = process.env.PORT || 80;
 
 
@@ -19,7 +19,7 @@ app.use(reqflash())
 
 //database config
 const mongoose = require('mongoose')
-const  mongo = require('./models/mongo_config');
+const  mongo = require('./models/Mongo_config');
 const { render } = require('pug');
 const { Socket } = require('socket.io');
 let url = "";
