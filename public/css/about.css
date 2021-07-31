@@ -1,0 +1,135 @@
+
+#headings{
+    margin-left: 5%;
+    margin-top: 5%;
+    color: #003049;
+    text-decoration: underline;
+}
+#sub-headings{
+    margin-top: 5%;
+    color: #003049;
+    /* text-decoration: underline; */
+}
+
+#devInfo{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+#devInfo img{
+    border-radius: 10px;
+    margin-top: 5%;
+    /* margin: auto; */
+    width: 20%;
+}
+
+#devInfo p{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+
+#tech{
+    margin: auto;
+    width: 80%;
+    /* border: 2px solid black; */
+}
+#tech ul li{
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+#howToUse{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    margin-top: 5%;
+    /* border: 2px solid black; */
+    align-items: center;
+    width: 80%;
+    
+}
+
+#contact{
+    display: flex;
+    width: 80%;
+    margin: auto;
+
+}
+#contact form{
+    display: flex;
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    flex-direction: column;
+}
+#contact form input,textarea{
+    border-width: 0ch;
+    border-radius: 10px;
+    resize: none;
+    padding: 5px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    box-shadow: 0px 0px 2px 1px rgba(0, 110, 255, 0.795) ;
+}
+
+#contact form input,textarea{
+    outline: none;
+}
+
+#contact Button{
+    width: 30%;
+    margin: auto;
+    margin-top: 5%;
+    color: aliceblue;
+    border-radius: 10px;
+    background-color: rgb(53, 120, 228);
+}
+#contact Button:hover{
+    background-color: rgb(10, 97, 238);
+}
+
+@media screen and (max-width : 600px) {
+    #headings {
+        font-size: 1.5rem;
+    }
+    
+    #devInfo {
+        width: 100%;
+    }
+    div#devInfo img {
+        width: 30%;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    
+    #sub-headings {
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width : 400px) {
+    #headings {
+        font-size: 1.2rem;
+    }
+    #contact form input, textarea {
+    padding: 0px;
+    }
+    
+    div#devInfo img {
+        width: 40%;
+    }
+    
+    h1{
+        font-size: 1.2rem;
+    }
+    
+    #sub-headings {
+        font-size: 1rem;
+    }
+
+}
