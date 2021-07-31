@@ -855,6 +855,50 @@ exports.chat = (req, res) => {
   }
 };
 
+
+//--------------about us-----------------------
+
+exports.about = (req, res) => {
+  var list = parseCookies(req);
+  var name = list["name"];
+
+  if (name != null) {
+      res.render("aboutUs.pug", { title: "About",
+      show: "true",
+      name: `${name}`,
+      profile: "ture",
+      flag: "true",});
+    }
+    else{
+      res.render("aboutUs.pug", { title : "About"});
+  }
+};
+
+exports.aboutPost = (req, res) => {
+  var mailBody = {
+    from: req.body.email,
+    to: "pocketchat30@gmail.com",
+    subject: "Feedback for Pocket account",
+    text: "Good",
+    html: `
+    <h1>${req.body.name}</h1>
+    <p>FeedBack:- ${req.body.feedback}</p>
+    `
+  };
+
+  mail.sendMail(mailBody, function (error, info) {
+    if (error) {
+      // console.log(error);
+    } else {
+      res.redirect("/"
+      );
+    }
+  });
+}
+
+
+
+
 // -----------------Thanks you Page ----------------
 
 exports.thank = (req, res) => {
