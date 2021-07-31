@@ -146,7 +146,8 @@ io.on('connection',(socket) =>{
 // print the last massages
 
 socket.on("printMsg",(data)=>{
-        massage.find({Sender : {"$in":[data.reciver,data.sender]},Reciver:{"$in":[data.reciver,data.sender]}}).sort({Stime : 1,Sdate : -1}).then((Rdata)=>{
+        let sort = { createdOn : 1}
+        massage.find({Sender : {"$in":[data.reciver,data.sender]},Reciver:{"$in":[data.reciver,data.sender]}}).sort(sort).then((Rdata)=>{
                 // console.log(Rdata);
                 socket.emit("takeMsg",Rdata)
         })
