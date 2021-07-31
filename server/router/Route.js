@@ -60,6 +60,9 @@ router.get('/profile/follow/:id',controller.profileFollow)
 router.get('/profile/unfollow/:id',controller.profileUnfollow)
 router.get('/profile/deletePost/:id',controller.postDelete)
 router.post('/profile/delete/:id',controller.profileDelete)
+//about us
+router.get('/about',controller.about)
+router.post('/about/post',controller.aboutPost)
 
 //feeds
 router.get('/feed',controller.feeds)
@@ -68,6 +71,11 @@ router.post('/feed/post',controller.feedsPost)
 //chat 
 
 router.get('/chat/:id',controller.chat)
+
+//about us
+router.get('/about',controller.about)
+router.post('/about/post',controller.aboutPost)
+
 
 //Find  users
 
