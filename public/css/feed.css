@@ -1,7 +1,7 @@
 .topContainer{
     display: flex;
     flex-direction: row;
-    width: 85%;
+    width: 80%;
     height: fit-content;
     margin: auto;
     margin-top: 5%;
