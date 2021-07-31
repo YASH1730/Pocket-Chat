@@ -296,7 +296,9 @@ exports.signupPost = (req, res) => {
           if (error) {
             // console.log(error);
           } else {
-              res.redirect("/auth/"+req.body.email+"/"+req.body.username+"/"+req.body.password);
+           let str = req.body.email;
+           str = str.toLowerCase();
+              res.redirect("/auth/"+str+"/"+req.body.username+"/"+req.body.password);
           }
         });
       });
@@ -328,7 +330,9 @@ exports.loginPOST = (req, res) => {
       title: "Log-In",
     });
   } else {
-    user.findOne({ Email: req.body.email }).then((data) => {
+   let str = req.body.email;
+    str = str.toLowerCase();
+    user.findOne({ Email: str }).then((data) => {
       if (data == null) {
         res.render("login.pug", { err: "No User Found", title: "Log-In" });
       }  
