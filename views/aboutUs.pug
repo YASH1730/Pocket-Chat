@@ -1,0 +1,52 @@
+extends header.pug 
+
+block style 
+    style
+        include ../public/css/about.css
+block content
+    h1#headings Introduction:-
+    #devInfo
+        img(src="https://res.cloudinary.com/yash3002/image/upload/v1627217173/ajej4a8opga9fzlnvrhr.jpg", alt="Devloper Image", srcset="")
+        br
+        h1 Yashwant Sahu
+        br
+        p Hello, i am Yashwant Sahu. I have devloped this web app for chatting purposes. Here u can chat with your buddies with seemless connectivity.
+    h1#headings Technology Used:-
+    #tech
+        h3#sub-headings Front-End:-
+        ul  
+            li HTML (Hyper Text Markup Langauge)
+            li Vanilla Cascading Style Sheets 
+            li Vanilla Java Script
+        h3#sub-headings Back-End:-
+        ul  
+            li Node Js
+            li Express Js  
+            li Pug 
+        h3#sub-headings Database:-
+        ul  
+            li MongoDb 
+            li Cloudinary
+    h1#headings How to use:-
+    #howToUse 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/aS-LUW5Jim0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    h1#headings Contact Details:-
+    #contact
+        form(action="/about/post", method="post")
+            lable(for = "name") 
+                strong Name
+            input(type="text" id = "name" name = "name")
+            lable(for = "email") 
+                strong Email
+            input(type="email" name = "email" id = "email")
+            lable(for = "feedback" ) 
+                strong Feedback
+            textarea(name="feedback", cols="30",id ="feedback", rows="5")  
+            button(type="submit" id = "submit") 
+                strong Submit
+    br
+    br
+block script 
+    script(src="../public/js/about.js") 
+    
+
