@@ -7,14 +7,14 @@ const follow = require("../../../models/FollowUnfollow.js");
 const massage = require("../../../models/Massage.js");
 const OTP = require("../../../models/Otp.js");
 const bcrypt = require("bcrypt");
-const JWT = require("jsonwebtoken");
+// const JWT = require("jsonwebtoken");
 const router = require("express").Router();
 const cook = require("cookie-parser");
-const { json, response } = require("express");
+// const { json, response } = require("express");
 const fileupload = require("express-fileupload");
 const cloud = require("cloudinary").v2;
 const nodemailer = require("nodemailer");
-const { body, validationResult } = require("express-validator");
+// const { body, validationResult } = require("express-validator");
 const {google} = require("googleapis")
 
 
@@ -49,7 +49,7 @@ var mail = nodemailer.createTransport({
 
 // const { count } = require("/media/yashwant/Mystroage/Chat_App_Final/models/user.js");
 
-const jwtKey = process.env.jwtKey;
+// const jwtKey = process.env.jwtKey;
 
 //cookie
 router.use(cook());
@@ -344,12 +344,6 @@ exports.loginPOST = (req, res) => {
             title: "Log-In",
           });
         } else {
-          const jwtoken = JWT.sign({ data }, jwtKey);
-          data.jwtToken = jwtoken;
-          res.cookie("Token", jwtoken, {
-            maxAge: 100000,
-            httpOnly: true,
-          });
           res.cookie("name", data.UserName);
           data.save().then(() => {
             // console.log(data.UserName)
