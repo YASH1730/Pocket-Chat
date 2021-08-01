@@ -69,7 +69,7 @@ io.on('connection',(socket) =>{
 
     socket.on('UserName',(name)=>{
 
-        console.log(performance.now());
+//         console.log(performance.now());
         let time = new Date();
         let ctime = time.getHours();
         var greet = "";
