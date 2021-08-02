@@ -120,7 +120,7 @@ function appendStatus(data){
   const small = document.createElement("small")
   div.classList.add("seen");
   small.classList.add("small");
-  small.innerText = data +"at "+ Time.getHours() +":"+ Time.getMinutes()+":"+ Time.getSeconds()
+  small.innerText = data +" at "+ Time.getHours() +":"+ Time.getMinutes()+":"+ Time.getSeconds()
   div.appendChild(small);
   display.appendChild(div);
   scroll();
