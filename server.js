@@ -112,7 +112,7 @@ io.on('connection',(socket) =>{
                         Massage : data.msg,
                         Data : date,
                         Time : ctime,
-                        Status : "Sent at"
+                        Status : "Sent at "
 
                     })
                     metaData.save().then(()=>{
