@@ -152,13 +152,13 @@ exports.authPost = (req, res) => {
   });
 };
 
-async function saveData(obj) {
+function saveData(obj) {
   bcrypt.genSalt(10, (err, salt) => {
     if (err) throw err;
     else {
       let str = obj.email;
       str = str.toLowerCase();
-      await bcrypt.hash(obj.password, salt, (err, hash) => {
+      bcrypt.hash(obj.password, salt, (err, hash) => {
         // schema for saving the data
         const data = new user({
           UserName: obj.name,
@@ -177,7 +177,7 @@ async function saveData(obj) {
         });
 
         //at the last data svaed
-        await data
+         data
           .save()
           .then((data) => {
             console.log("ALL Done");
