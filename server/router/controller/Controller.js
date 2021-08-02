@@ -15,13 +15,8 @@ const cook = require("cookie-parser");
 const fileupload = require("express-fileupload");
 const cloud = require("cloudinary").v2;
 const nodemailer = require("nodemailer");
-// const { body, validationResult } = require("express-validator");
-const { google } = require("googleapis");
 
-const client_id = process.env.client_id;
-const cleint_secret = process.env.cleint_secret;
-const redirect_URI = process.env.redirect_URI;
-const refresh = process.env.refresh;
+const pass = process.env.pass;
 
 const oAuth2 = new google.auth.OAuth2(client_id, cleint_secret, redirect_URI);
 oAuth2.setCredentials({ refresh_token: refresh });
@@ -35,12 +30,8 @@ var mail = nodemailer.createTransport({
   host: "smtp.gmail.com",
   secure: true,
   auth: {
-    type: "OAuth2",
     user: "pocketchat30@gmail.com",
-    clientId: client_id,
-    clientSecret: cleint_secret,
-    refreshToken: refresh,
-    accessToken: accessT,
+    pass : pass
   },
 });
 
