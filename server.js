@@ -182,7 +182,7 @@ socket.on("confirm",(data)=>{
                         Rdata[index].save()
                     }
                     else{
-                        Rdata[index].Status = "Seet at "
+                        Rdata[index].Status = "Sent at "
                         Rdata[index].save()
                     }
                 }
